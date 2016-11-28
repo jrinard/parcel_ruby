@@ -1,0 +1,22 @@
+<h1>Parcel</h1>
+ <h4></h4>
+
+ <form action="/result">
+   <div class="form-group">
+      <label for="height">Height</label>
+      <input id="height" name="height" class="form-control" type="text"></input>
+      <label for="width">Width</label>
+      <input  id="width" name="width" class="form-control" type="text"></input>
+      <label for="length">Length</label>
+      <input  id="length" name="length" class="form-control" type="text"></input>
+   </div>
+   <button type="submit" class="btn btn-success">Go</button>
+ </form>
+
+ <div id="output">
+   <h3></h3>
+   <h5>height: <%= @height%></h5>
+   <h5>width: <%= @width%></h5>
+   <h5>length: <%= @length%></h5>
+   <%= @volumn %>
+ </div>
