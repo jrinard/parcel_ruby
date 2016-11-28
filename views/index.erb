@@ -1,5 +1,5 @@
 <h1>Parcel</h1>
- <h4></h4>
+ <h4>Enter values to determine shipping cost.</h4>
 
  <form action="/result">
    <div class="form-group">
@@ -9,14 +9,18 @@
       <input  id="width" name="width" class="form-control" type="text"></input>
       <label for="length">Length</label>
       <input  id="length" name="length" class="form-control" type="text"></input>
+      <label for="weight">Weight (lbs)</label>
+      <input  id="weight" name="weight" class="form-control" type="text"></input>
    </div>
    <button type="submit" class="btn btn-success">Go</button>
  </form>
 
  <div id="output">
-   <h3></h3>
-   <h5>height: <%= @height%></h5>
-   <h5>width: <%= @width%></h5>
-   <h5>length: <%= @length%></h5>
-   <%= @volumn %>
+   <h3>Parcel Dimensions</h3>
+   <h5>Height: <%= @height%> Width: <%= @width%> Length: <%= @length%></h5>
+   <!-- <h5></h5>
+   <h5></h5> -->
+   <h5>With a weight of: <%= @weight%> lbs</h5>
+   <h3>Final Cost</h3>
+   <h5>Your cost to ship is going to be: $<%= @cost_to_ship%></h5>
  </div>

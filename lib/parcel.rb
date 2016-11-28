@@ -11,6 +11,7 @@ class Parcel
   end
 
   define_method(:cost_to_ship) do
+    @weight = @weight * 0.05
      @weight.*(volume())
   end
 end
