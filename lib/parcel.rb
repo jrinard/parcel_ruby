@@ -1,17 +1,16 @@
 class Parcel
-  define_method(:initialize) do | height, width, length|
+  define_method(:initialize) do |height, width, length, weight|
     @height = height
     @width = width
     @length = length
-    # @weight = weight
+    @weight = weight
   end
 
-  define_method(:volume) do | height, width, length |
-    final_volume = height * width * length
-    final_volume
+  define_method(:volume) do
+  @height * @width * @length
   end
 
-  # define_method(:cost_to_ship) do | weight |
-  #
-  # end
+  define_method(:cost_to_ship) do
+     @weight.*(volume())
+  end
 end
